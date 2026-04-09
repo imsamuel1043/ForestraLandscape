@@ -9,7 +9,6 @@ import Select from "react-select";
 
 
 
-// import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Abouthome from "./Abouthome";
 import Valuehome from "./Valuehome";
@@ -90,7 +89,7 @@ export default function App() {
 
     return (
         <div>
-            {/* <Navbar /> */}
+
             <Hero />
             <Abouthome />
             <Valuehome />
@@ -98,57 +97,6 @@ export default function App() {
             <Processhome />
             <Portfoliohome />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* Testimonials */}
-            {/* <section className="py-5 text-center">
-                <div className="container" data-aos="fade-up">
-                    <h2 className="mb-4">What Clients Say</h2>
-                    <p>“Amazing transformation! Our backyard looks stunning.”</p>
-                    <p>– John D., Homeowner</p>
-                </div>
-            </section> */}
-
-            {/* Blog */}
-            {/* <section className="py-5 bg-light">
-                <div className="container text-center" data-aos="fade-up">
-                    <h2 className="mb-4">Latest Tips</h2>
-                    <div className="row">
-                        {["Garden Trends 2026", "Best Plants for Climate", "Lawn Care Tips"].map((b, i) => (
-                            <div className="col-md-4" key={i}>
-                                <div className="card premium-card p-3">
-                                    <h5>{b}</h5>
-                                    <p>Learn expert tips for maintaining your landscape.</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section> */}
-
-            {/* CTA */}
-            {/* <section className="cta text-white text-center py-5" data-aos="fade-up">
-                <div className="cta-overlay">
-                    <h2>Ready to Transform Your Landscape?</h2>
-                    <button className="btn btn-light premium-btn mt-3">Contact Us</button>
-                </div>
-            </section> */}
 
             {/* Contact */}
             <section id="contact" bg-dark >
@@ -169,10 +117,6 @@ export default function App() {
                 </div>
             </section>
 
-            {/* Footer */}
-            {/* <footer className="footer text-center text-white p-4">
-                <p>© 2026 GreenScape Landscaping | All Rights Reserved</p>
-            </footer> */}
         </div>
     );
 }

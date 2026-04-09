@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from 'react-router-dom';
 
 
-import "../../assets/Css/Nav.css";
+import "../assets/Css/Nav.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 
-import logo from "../../assets/Img/forestralogo.png";
+import logo from "../../src/assets/Img/forestralogo.png";
 
 
 
@@ -54,18 +55,63 @@ const Navbar = () => {
 
             {/* Center Links */}
             <ul className="navbar-nav mx-auto align-items-lg-center">
+
               <li className="nav-item">
-                <a className="nav-link active" href="#">Home</a>
+                <NavLink
+                  to="/"
+                  end
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Home
+                </NavLink>
               </li>
+
               <li className="nav-item">
-                <a className="nav-link" href="#services">Services</a>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  About
+                </NavLink>
               </li>
+
               <li className="nav-item">
-                <a className="nav-link" href="#portfolio">Portfolio</a>
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Services
+                </NavLink>
               </li>
+
+             <li className="nav-item">
+                <NavLink
+                  to="/portfolio"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Portfolio
+                </NavLink>
+              </li>
+
               <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Contact
+                </NavLink>
               </li>
+
             </ul>
 
             {/* Right Side */}
