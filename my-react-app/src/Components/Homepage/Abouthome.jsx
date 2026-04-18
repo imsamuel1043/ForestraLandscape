@@ -28,12 +28,13 @@ const Abouthome = () => {
                     </p>
 
                     <h2 className="values-title" data-aos="fade-up">
-                        Forestra,<br />Where elegance meets
+                        Forestra, Where elegance meets
                         <span> natural design.</span>
                     </h2>
 
                     <p className="about-desc mx-auto" data-aos="fade-up">
-                        Where passion meets precision, we shape landscapes into elegant living experiences.
+                        “We design outdoor spaces that feel alive, welcoming, and deeply connected to nature. Inspired by the lush beauty of Wayanad,
+                         our tropical landscapes blend sustainability, calm, and timeless design to enhance both environment and wellbeing.”                   
                     </p>
 
                     <button className="btn about-btn mt-3" data-aos="zoom-in">

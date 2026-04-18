@@ -1,65 +1,86 @@
-import React from 'react'
+import React from 'react';
+import "../../assets/Css/Home.css";
+
+import work1 from "../../assets/Img/blackbamboo.jpeg";
+import work2 from "../../assets/Img/goldenbamboo.jpeg";
+import work3 from "../../assets/Img/ponytailpalm.jpeg";
+import work4 from "../../assets/Img/whitebamboo.jpeg";
 
 const Portfoliohome = () => {
+
+    const items = [
+        {
+            title: "Home Garden",
+            tags: ["Home", "Garden", "Landscape Design"],
+            img: work4
+        },
+        {
+            title: "Landscape Design",
+            tags: ["Home", "Garden", "Landscape Design"],
+            img: work3
+        },
+        {
+            title: "Bamboo plants",
+            tags: ["Outdoor", "Garden", "Landscape Design"],
+            img: work2
+        },
+        {
+            title: "Bamboo plants",
+            tags: ["Outdoor", "Garden", "Landscape Design"],
+            img: work1
+        }
+    ];
+
     return (
-        <>
+        <section className="portfolio-section py-5">
 
-            {/* Portfolio */}
-            <section id="portfolio" className="portfolio-section py-5">
-                <div className="container text-center">
+            <div className="container text-center">
 
-                    <div className="text-center process-head">
-                        <span className="values-tag" data-aos="fade-up " >[ OUR WORK ]</span>
-                        <h2 className="values-title forwhite mt-3" data-aos="fade-up" >
-                            Some Of Our <span>Wonderful Projects</span>
-                        </h2>
-                        <p className=" text-dark mb-5" data-aos="fade-up">
-                            Explore how we transform ideas into stunning landscapes <br />that blend beauty, function, and lasting impact.
-                        </p>
-                    </div>
+                {/* Header */}
+                <div className="process-head mb-5">
+                    <span className="values-tag">[ OUR WORK ]</span>
+                    <h2 className="values-title mt-3">
+                        Some Of Our <span>Wonderful Projects</span>
+                    </h2>
+                    <p className="text-dark">
+                        Explore how we transform ideas into stunning landscapes
+                    </p>
+                </div>
 
-                    <div className="row g-4">
-                        {[
-                            {
-                                title: "Modern Garden",
-                                type: "Residential",
-                                img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-                            },
-                            {
-                                title: "Outdoor Living Space",
-                                type: "Landscape Design",
-                                img: "https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62"
-                            },
-                            {
-                                title: "Luxury Backyard",
-                                type: "Hardscaping",
-                                img: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735"
-                            }
-                        ].map((item, i) => (
+                {/* FLEX CARDS */}
+                <div className="portfolio-flex">
 
-                            <div className="col-lg-4 col-md-6" key={i} data-aos="zoom-in">
+                    {items.map((item, i) => (
+                        <div className="portfolio-item" key={i}>
 
-                                <div className="portfolio-card">
+                            <img src={item.img} alt={item.title} />
 
-                                    <img src={item.img} alt={item.title} />
+                            {/* Overlay */}
+                            <div className="portfolio-content">
 
-                                    <div className="portfolio-overlay">
-                                        <span>{item.type}</span>
-                                        <h5>{item.title}</h5>
-                                    </div>
-
+                                <div className="tags">
+                                    {item.tags.map((tag, idx) => (
+                                        <span key={idx}>{tag}</span>
+                                    ))}
                                 </div>
+
+                                <h5>{item.title}</h5>
 
                             </div>
 
-                        ))}
-                    </div>
+                            {/* Arrow */}
+                            <div className="arrow-btn">
+                                <i className="bi bi-arrow-up-right"></i>
+                            </div>
+
+                        </div>
+                    ))}
 
                 </div>
-            </section>
 
-        </>
-    )
-}
+            </div>
+        </section>
+    );
+};
 
-export default Portfoliohome
+export default Portfoliohome;

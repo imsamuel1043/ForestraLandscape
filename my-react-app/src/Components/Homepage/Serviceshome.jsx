@@ -2,11 +2,6 @@ import React from 'react'
 import "../../assets/Css/Home.css";
 
 
-import Hardscaping from "../../assets/Img/Hardscaping.jpeg";
-import VerticalGarden from "../../assets/Img/VerticalGarden.jpg";
-import LawnCare from "../../assets/Img/LawnCare.jpg";
-import LandscapeDesign from "../../assets/Img/LandscapeDesign.jpg";
-
 const Serviceshome = () => {
     return (
         <>
@@ -23,48 +18,30 @@ const Serviceshome = () => {
                         improve usability, and bring nature closer to everyday living
                     </p>
 
-                    <div className="row g-4">
+                    <div className="row g-4 justify-content-center premium-services">
 
                         {[
-                            {
-                                name: "Landscape Design",
-                                img: LandscapeDesign
-                            },
-                            {
-                                name: "Lawn Care",
-                                img: LawnCare
-                            },
-                            {
-                                name: "Vertical Garden",
-                                img: VerticalGarden
-                            },
-                            {
-                                name: "Hardscaping",
-                                img: Hardscaping
-                            }
+                            { name: "Hardscaping & Outdoor Structures", icon: "bi-bricks" },
+                            { name: "Water Features & Irrigation", icon: "bi-droplet-half" },
+                            { name: "Lawn & Ground Cover", icon: "bi-flower1" },
+                            { name: "Resort, Residential & Commercial Landscaping", icon: "bi-buildings" },
+                            { name: "Garden Design & Planning", icon: "bi-pencil-square" },
+                            { name: "Planting & Green Development", icon: "bi-tree" },
+                            { name: "Tropical & Ecological Landscaping", icon: "bi-globe2" },
+                            { name: "Landscape Maintenance", icon: "bi-tools" }
                         ].map((s, i) => (
 
                             <div
-                                className="col-lg-3 col-md-6"
+                                className="col-lg-3 col-md-4 col-6 text-center"
                                 key={i}
-                                data-aos="zoom-in"
+                                data-aos="fade-up"
                                 data-aos-delay={i * 100}
                             >
-                                <div
-                                    className="service-card"
-                                    style={{ backgroundImage: `url(${s.img})` }}
-                                >
-
-                                    <div className="service-overlay"></div>
-
-                                    <div className="service-content">
-                                        <h5>{s.name}</h5>
-                                        <p>
-                                            Premium {s.name.toLowerCase()} solutions crafted for modern outdoor living.
-                                        </p>
-                                        <span className="service-link">Explore →</span>
+                                <div className="service-icon-box">
+                                    <div className="icon-wrap">
+                                        <i className={`bi ${s.icon}`}></i>
                                     </div>
-
+                                    <p>{s.name}</p>
                                 </div>
                             </div>
 

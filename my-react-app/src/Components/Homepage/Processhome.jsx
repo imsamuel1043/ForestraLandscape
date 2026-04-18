@@ -52,10 +52,10 @@ const Processhome = () => {
 
                         <div className="text-center process-head">
                             <span className="values-tag" data-aos="fade-up " >[ OUR PROCESS ]</span>
-                            <h2 className="values-title fordark mt-3" data-aos="fade-up" >
+                            <h2 className="values-title mt-3" data-aos="fade-up" >
                                 From Vision To <span>Reality, Step By Step</span>
                             </h2>
-                            <p className="section-subtitle mb-5" data-aos="fade-up">
+                            <p className="section-subtitles forwhite mb-5" data-aos="fade-up">
                                 We follow a clear and collaborative approach to transform ideas into <br />beautifully crafted spaces with precision and care.
                             </p>
                         </div>
