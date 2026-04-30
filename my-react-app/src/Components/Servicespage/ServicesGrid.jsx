@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../../assets/Css/Services.css";
 
-import img1 from "../../assets/Img/img1.jpg";
-import img2 from "../../assets/Img/img2.jpg";
-import img3 from "../../assets/Img/img3.jpg";
-import img4 from "../../assets/Img/img4.jpg";
-import img5 from "../../assets/Img/img5.jpg";
+// import img1 from "../../assets/Img/img1.jpg";
+// import img2 from "../../assets/Img/img2.jpg";
+// import img3 from "../../assets/Img/img3.jpg";
+// import img4 from "../../assets/Img/img4.jpg";
+// import img5 from "../../assets/Img/img5.jpg";
 
-const images = [img1, img2, img3, img4, img5];
+// const images = [img1, img2, img3, img4, img5];
 
 const ServicesGrid = () => {
   const [index, setIndex] = useState(0);
@@ -35,7 +35,7 @@ const ServicesGrid = () => {
 
         {/*  */}
 
-        <div className="image-stack">
+        {/* <div className="image-stack">
           {images.map((img, i) => (
             <img
               key={i}
@@ -46,7 +46,7 @@ const ServicesGrid = () => {
               }`}
             />
           ))}
-        </div>
+        </div> */}
 
       </div>
     </section>
