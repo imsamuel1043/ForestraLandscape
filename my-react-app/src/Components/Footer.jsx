@@ -27,10 +27,14 @@ const Footer = () => {
                     <div className="col-lg-3 col-md-6">
                         <h5>Services</h5>
                         <ul>
-                            <li>Landscape Design</li>
-                            <li>Lawn Care</li>
-                            <li>Vertical Garden</li>
-                            <li>Hardscaping</li>
+                            <li>Hardscaping & Outdoor Structures</li>
+                            <li>Water Features & Irrigation</li>
+                            <li>Lawn & Ground Cover</li>
+                            <li>Resort, Residential & Commercial Landscaping</li>
+                            <li>Garden Design & Planning</li>
+                            <li>Planting & Green Development</li>
+                            <li>Tropical & Ecological Landscaping</li>
+                            <li>Landscape Maintenance</li>
 
                         </ul>
                     </div>

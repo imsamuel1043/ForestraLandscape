@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from 'react-router-dom';
-
+import { NavLink } from "react-router-dom";
 
 import "../assets/Css/Nav.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 import logo from "../../src/assets/Img/forestralogo.png";
 
-
-
-
 const Navbar = () => {
-
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -27,114 +22,112 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = () => {
+    setMenuOpen(false);
+  };
 
   return (
-    <>
-      {/* Navbar */}
-      <nav className={`navbar navbar-expand-lg fixed-top premium-navbar ${scrolled ? "scrolled" : ""}`}>
-        <div className="container">
+    <nav
+      className={`navbar navbar-expand-lg fixed-top premium-navbar ${scrolled ? "scrolled" : ""
+        }`}
+    >
+      <div className="container">
+        {/* Logo */}
+        <a className="navbar-brand d-flex align-items-center" href="#">
+          <img src={logo} alt="GreenScape Logo" className="logo-img" />
+        </a>
 
-          {/* Logo */}
-          <a className="navbar-brand d-flex align-items-center" href="#">
-            <img src={logo} alt="GreenScape Logo" className="logo-img" />
+        {/* Mobile Toggle */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span style={{ color: "#fff", fontSize: "1.5rem" }}>
+            {menuOpen ? "✕" : "☰"}
+          </span>
+        </button>
 
-          </a>
+        {/* Menu */}
+        <div
+          className={`collapse navbar-collapse ${menuOpen ? "show" : ""
+            }`}
+          id="nav"
+        >
+          {/* Center Links */}
+          <ul className="navbar-nav mx-auto align-items-lg-center">
+            <li className="nav-item">
+              <NavLink
+                to="/"
+                end
+                onClick={handleNavClick}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Home
+              </NavLink>
+            </li>
 
-          {/* Mobile Toggle */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#nav"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+            <li className="nav-item">
+              <NavLink
+                to="/about"
+                onClick={handleNavClick}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                About
+              </NavLink>
+            </li>
 
-          {/* Menu */}
-          <div className="collapse navbar-collapse" id="nav">
+            <li className="nav-item">
+              <NavLink
+                to="/services"
+                onClick={handleNavClick}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Services
+              </NavLink>
+            </li>
 
-            {/* Center Links */}
-            <ul className="navbar-nav mx-auto align-items-lg-center">
+            <li className="nav-item">
+              <NavLink
+                to="/portfolio"
+                onClick={handleNavClick}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Portfolio
+              </NavLink>
+            </li>
 
-              <li className="nav-item">
-                <NavLink
-                  to="/"
-                  end
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                >
-                  Home
-                </NavLink>
-              </li>
+            <li className="nav-item">
+              <NavLink
+                to="/contact"
+                onClick={handleNavClick}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
 
-              <li className="nav-item">
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                >
-                  About
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink
-                  to="/services"
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                >
-                  Services
-                </NavLink>
-              </li>
-
-             <li className="nav-item">
-                <NavLink
-                  to="/portfolio"
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                >
-                  Portfolio
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                >
-                  Contact
-                </NavLink>
-              </li>
-
-            </ul>
-
-            {/* Right Side */}
-            <div className="d-flex align-items-center gap-3">
-
-              {/* Phone (very US-style trust element)
-                                <div className="nav-phone d-none d-lg-block">
-                                    <span>📞 (123) 456-7890</span>
-                                </div> */}
-
-              {/* CTA */}
-              <a href="#contact" className="btn nav-cta-btn">
-                Get Free Quote
-              </a>
-
-            </div>
-
+          {/* Right Side */}
+          <div className="d-flex align-items-center gap-3">
+            <a href="#contact" className="btn nav-cta-btn">
+              Get Free Quote
+            </a>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
+  );
+};
 
-    </>
-  )
-}
-
-export default Navbar
+export default Navbar;

@@ -7,12 +7,13 @@ import Home from './Components/Homepage/Home';
 import About from './Components/Aboutpage/About';
 import Footer from './Components/Footer';
 import Services from './Components/Servicespage/Services';
-
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
 
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar />
 
       <Routes>

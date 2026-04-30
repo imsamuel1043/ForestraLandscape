@@ -52,7 +52,7 @@
 
 /* TITLE */
 .about-hero-title {
-    font-size: clamp(40px, 8vw, 90px);
+    font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: 2px;
     margin: 0;
