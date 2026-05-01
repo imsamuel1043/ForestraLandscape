@@ -8,6 +8,7 @@ import About from './Components/Aboutpage/About';
 import Footer from './Components/Footer';
 import Services from './Components/Servicespage/Services';
 import ScrollToTop from './Components/ScrollToTop';
+import Collections from './Components/Collectionspage/Collections';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services/>} />
+        <Route path="/collection" element={<Collections/>} />
 
       </Routes>
 

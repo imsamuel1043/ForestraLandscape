@@ -1,0 +1,258 @@
+/* =========================
+   GLOBAL SPACING
+========================= */
+.collections-hero,
+.featured-collection,
+.collections-grid,
+.collections-cta {
+  padding: 80px 0;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.collections-hero {
+  height: 60vh;
+  background: url("/images/collections-hero.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collections-hero .overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.collections-hero h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.collections-hero p {
+  color: #ddd;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+.collections-filter {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+
+.collections-filter button {
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  color: #555;
+  position: relative;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+}
+
+/* underline animation */
+.collections-filter button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #2e7d32;
+  transition: width 0.3s ease;
+}
+
+.collections-filter button:hover::after,
+.collections-filter button.active::after {
+  width: 100%;
+}
+
+.collections-filter button.active {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* Wrapper */
+.collections-filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+/* Search box */
+.collections-search input {
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.collections-search input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .collections-filter-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .collections-search input {
+    width: 100%;
+  }
+}
+
+/* =========================
+   FEATURED SECTION
+========================= */
+.featured-collection img {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.featured-collection h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.featured-collection p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.featured-collection button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.featured-collection button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   GRID SECTION
+========================= */
+.collections-grid {
+  padding-top: 40px;
+}
+
+.collection-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* subtle shadow */
+.collection-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* image wrapper */
+.collection-card .image-wrapper {
+  overflow: hidden;
+  height: 250px;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.collection-card:hover img {
+  transform: scale(1.08);
+}
+
+/* card content */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.card-content span {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+.collections-cta {
+  background: url("/images/cta-bg.jpg") center/cover no-repeat;
+  position: relative;
+  text-align: center;
+}
+
+.collections-cta .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px 20px;
+}
+
+.collections-cta h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.collections-cta button {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.collections-cta button:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .collections-hero h1 {
+    font-size: 32px;
+  }
+
+  .collections-hero {
+    height: 50vh;
+  }
+
+  .collection-card .image-wrapper {
+    height: 200px;
+  }
+}
