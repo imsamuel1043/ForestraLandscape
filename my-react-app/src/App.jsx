@@ -9,19 +9,22 @@ import Footer from './Components/Footer';
 import Services from './Components/Servicespage/Services';
 import ScrollToTop from './Components/ScrollToTop';
 import Collections from './Components/Collectionspage/Collections';
+import Contact from './Components/Contactpage/Contact';
 
 function App() {
 
   return (
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services/>} />
-        <Route path="/collection" element={<Collections/>} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/collection" element={<Collections />} />
+        <Route path="/contact" element={<Contact />} />
+
 
       </Routes>
 
